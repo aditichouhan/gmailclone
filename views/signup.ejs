@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    form{
+        position: absolute;
+        top: 10%;
+        left: 33%;
+        border-radius: 10px;
+        height: 80vh;
+        width: 30%;
+        /* background-color: rgb(246, 236, 236); */
+        flex-direction: column;
+        display: flex;
+        /* border-radius: 20px; */
+        /* box-shadow: 2px 1px 7px black; */
+        border: 1px solid rgb(222, 220, 220);
+    }
+    input{
+        margin: 10px;
+        padding: 10px;
+        /* border-radius: 20px; */
+        position: relative;
+        top: 10%;
+    }
+    p{
+        position: relative;
+        top: 8%;
+        left: 34%;
+        margin-bottom: 3%;
+        color: black;
+        font-size: 1.5vmax;
+        font-weight: 100;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    button{
+        position: relative;
+        top: 17%;
+        padding: 10px;
+        /* margin: 5%; */
+        border-radius: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .logo-img{
+        height: 30px;
+        width: 90px;
+        position: relative;
+        left: 40%;
+        top: 6%;
+    }
+</style>
+<body>
+    
+    <form action="/signup" method="post">
+       <img class="logo-img" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" alt="">
+        <p >Create Account </p>
+        <input type="text" 
+        name="username"
+        placeholder="Johndoe_"/>
+        <!--  -->
+        <input type="text"
+         name="name"
+        placeholder="John Doe"/>
+        <!-- ---- -->
+        <input type="email" 
+        name="email"
+        placeholder="John@doe.example.com"/>
+        <input type="password" 
+        name="password"
+        placeholder="*****"/> <br>
+ 
+        <button style="background-color: #4285f4; color: white; border: none; font-size: 1.7vmax;" >Create</button>
+     </form>
+    </div>
+</body>
+</html>

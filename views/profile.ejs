@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        /* background-color: aqua; */
+    }
+
+    .naviagtion {
+        height: 10vh;
+        width: 100%;
+        background-color: #f6f8fc;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left {
+        height: 100%;
+        width: 15%;
+        /* background-color: red; */
+        margin-left: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    h4 {
+        font-size: 1.6vmax;
+    }
+
+    .ri-menu-line {
+        font-size: 1.6vmax;
+    }
+
+    .ri-question-line {
+        font-size: 1.6vmax;
+    }
+
+    .ri-settings-4-line {
+        font-size: 1.6vmax;
+    }
+
+    .ri-notification-3-line {
+        font-size: 1.6vmax;
+    }
+
+    .nav-input {
+        border: none;
+        width: 100%;
+        border-radius: 10px;
+        padding: 14px 2px;
+        background-color: #eaf1fb;
+    }
+
+    .mid {
+        height: 100%;
+        width: 40%;
+        /* background-color: rgb(40, 167, 56); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right {
+        height: 100%;
+        width: 14%;
+        /* background-color: rgb(118, 85, 85); */
+        margin-right: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .profile-div {
+        height: 40px;
+        width: 40px;
+        background-color: darkorchid;
+        border-radius: 20px;
+    }
+
+    .profile-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50px;
+    }
+
+    .dp-div {
+        height: 80px;
+        width: 80px;
+        background-color: darkcyan;
+        border-radius: 50px;
+        position: absolute;
+        top: 16%;
+        left: 45%;
+    }
+
+    .dp-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50px;
+    }
+
+    h2 {
+        position: absolute;
+        top: 30%;
+        left: 42%;
+        font-size: 1.9vmax;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .mang-pera {
+        position: absolute;
+        top: 37%;
+        left: 24%;
+        font-size: 1.3vmax;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    span {
+        color: rgb(101, 101, 223);
+    }
+
+    textarea {
+        position: absolute;
+        top: 44%;
+        left: 24%;
+        font-size: 1.3vmax;
+    }
+
+    .avatar-input {
+        width: 20%;
+        position: absolute;
+        top: 60%;
+        left: 24%;
+        font-size: 1.3vmax;
+    }
+
+    button {
+        padding: 12px 15px;
+        border-radius: 20px;
+        position: absolute;
+        top: 70%;
+        left: 24%;
+        border: none;
+        background-color: #c2e7ff;
+    }
+    .div-left{
+      position: relative;
+      top: 5%;
+        height: 80%;
+        width: 20%;
+        /* background-color: aqua; */
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .main-line-div{
+        height: 10%;
+        width: 60%;
+        background-color:  #e8f0fe;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 4%;
+        border-radius: 20px;
+    }
+    .line1{
+        height: 100%;
+        width: 50%;
+        /* background-color: #e8f0fe; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       margin-top: 3%;
+        margin-right: 25%;
+        
+    }
+    .main-line-div2{
+        height: 10%;
+        width: 60%;
+        /* background-color:  #e8f0fe; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 4%;
+        border-radius: 20px;
+    }
+    .main-line-div2:hover{
+        height: 10%;
+        width: 60%;
+       background-color: #e8f0fe;
+        border-radius: 20px;
+    }
+    .line2{
+        margin-right: 9%;
+      margin-top: 3%;
+        height: 100%;
+        width: 75%;
+        /* background-color: rgb(197, 140, 54); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-line-div3{
+        height: 10%;
+        width: 60%;
+        /* background-color:  #e8f0fe; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 4%;
+        border-radius: 20px;
+    }
+    .main-line-div3:hover{
+        height: 10%;
+        width: 60%;
+       background-color: #e8f0fe;
+        border-radius: 20px;
+    }
+    .line3{
+        /* margin: 3%; */
+        margin-right: 6%;
+        margin-top: 3%;
+        height: 100%;
+        width: 80%;
+        /* background-color: rgb(156, 20, 77); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-line-div4{
+        height: 10%;
+        width: 60%;
+        /* background-color:  #e8f0fe; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 4%;
+        border-radius: 20px;
+    }
+    .main-line-div4:hover{
+        height: 10%;
+        width: 60%;
+       background-color: #e8f0fe;
+        border-radius: 20px;
+    }
+    .line4{
+        /* margin: 3%; */
+        margin-top: 3%;
+        margin-right: 25%;
+        height: 100%;
+        width: 50%;
+        /* background-color: rgb(186, 219, 228); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-line-div5{
+        height: 10%;
+        width: 60%;
+        /* background-color:  #e8f0fe; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 4%;
+        border-radius: 20px;
+    }
+    .main-line-div5:hover{
+        height: 10%;
+        width: 60%;
+       background-color: #e8f0fe;
+        border-radius: 20px;
+    }
+    .line5{
+        /* margin: 3%; */
+        margin-right: 2%;
+        margin-top: 3%;
+        height: 100%;
+        width: 90%;
+        /* background-color: rgb(59, 183, 255); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-line-div6{
+        height: 10%;
+        width: 60%;
+        /* background-color:  #e8f0fe; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 4%;
+        border-radius: 20px;
+       
+    }
+    .main-line-div6:hover{
+        height: 10%;
+        width: 60%;
+       background-color: #e8f0fe;
+        border-radius: 20px;
+    }
+    .line6{
+        /* margin: 3%; */
+        /* margin-left: 13%; */
+        margin-top: 3%;
+        height: 100%;
+        width: 70%;
+        /* background-color: rgb(50, 43, 148); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .home-text{
+        font-size: 1.2vmax;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    i{
+        font-size: 1.3vmax;
+    }
+    hr{
+        width: 80%;
+        background-color: gray;
+    }
+
+
+</style>
+
+<body>
+    <div class="container">
+        <form action="/profile" method="post" enctype="multipart/form-data">
+            <!-- <textarea cols="30" rows="10" name="about" placeholder="start from here...."></textarea>
+        <input type="file" name="avatar" />
+        <button>Save profile</button> -->
+            <div class="naviagtion">
+                <div class="left">
+                    <i class="ri-menu-line"></i>
+
+                    <img width="30px"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
+                        alt="">
+                    <h4>Gmail</h4>
+                </div>
+                <div class="mid">
+                    <input class="nav-input" type="text" placeholder="search mail ">
+
+                </div>
+                <div class="right">
+                    <i class="ri-notification-3-line"></i>
+                    <i class="ri-question-line"></i>
+                    <i class="ri-settings-4-line"></i>
+                    <div class="profile-div">
+                        <img class="profile-img"
+                            src="https://images.pexels.com/photos/884979/pexels-photo-884979.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- --------------------nav end------------------ -->
+            <div class="dp-div">
+                <img class="dp-img"
+                    src="https://images.pexels.com/photos/884979/pexels-photo-884979.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+            </div>
+            <h2>welcome, Aria</h2>
+            <p class="mang-pera">Manage your info, privacy, and security to make Google work better for you. <span>learn more</span></p>
+            <textarea cols="70" rows="4" name="about" placeholder="start from here...."></textarea>
+            <input class="avatar-input" type="file" name="avatar" />
+            <button>Save profile</button>
+
+          
+            <button>Save settings</button>
+        </form>
+        <div class="div-left">
+            
+            <div class="main-line-div">
+            <div class="line1">
+                <i class="ri-home-line"></i>
+                <p class="home-text">Home</p>
+            </div>
+            </div>
+
+            <div class="main-line-div2">
+            <div class="line2">
+                <i class="ri-book-read-line"></i>
+                <p class="home-text">personal info</p>
+            </div>
+            </div>
+
+            <div class="main-line-div3">
+            <div class="line3">
+                <i class="ri-radio-button-line"></i>
+                <p class="home-text">Data & privacy</p>
+            </div>
+            </div>
+
+            <div class="main-line-div4">
+            <div class="line4">
+                <i class="ri-lock-2-line"></i>
+                <p class="home-text">security</p>
+            </div>
+            </div>
+
+            <div class="main-line-div5">
+            <div class="line5">
+                <i class="ri-group-line"></i>
+                <p class="home-text">people & sharing</p>
+            </div>
+            </div>
+
+            <div class="main-line-div6">
+            <div class="line6">
+                <i class="ri-bank-card-line"></i>
+                <p class="home-text">subscription</p>
+            </div>
+            </div>
+            <hr>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

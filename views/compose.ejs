@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compose</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    form {
+        box-shadow: 1px 3px 5px black;
+        border-radius: 10px;
+        height: 80vh;
+        width: 80vw;
+        background-color: rgb(242, 234, 224);
+        position: absolute;
+        top: 8%;
+        left: 10%;
+        flex-direction: column;
+        display: flex;
+    }
+
+    input {
+        margin: 1%;
+        padding: 12px 2px;
+        border-radius: 10px;
+    }
+
+    .submit-btn {
+        width: 50%;
+        pointer-events: none;
+        padding: 12px 2px;
+        border-radius: 10px;
+        margin: 1%;
+        color: rgb(246, 242, 242);
+        font-size: 1.5vmax;
+        background-color: rgb(153, 187, 248);
+    }
+
+    a {
+        width: 50%;
+        padding: 12px 2px;
+        border-radius: 10px;
+        margin: 1%;
+        color: rgb(250, 246, 246);
+        font-size: 1.5vmax;
+    }
+</style>
+
+<body>
+    <form action="/compose" method="post">
+        <h2>New message</h2>
+        <input type="email" name="email" placeholder="From" />
+        <input type="email" name="email" placeholder="To" />
+        <input type="text" placeholder="subject">
+        <input type="text" placeholder="compose email">
+
+        <a href="/send">
+            <button class="submit-btn" type="submit">send</button>
+        </a>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+     rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .naviagtion {
+        height: 10%;
+        width: 100%;
+        background-color: #f6f8fc;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left {
+        height: 100%;
+        width: 15%;
+        /* background-color: red; */
+        margin-left: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    h4 {
+        font-size: 1.6vmax;
+    }
+
+    .ri-menu-line {
+        font-size: 1.6vmax;
+    }
+
+    .ri-question-line {
+        font-size: 1.6vmax;
+    }
+
+    .ri-settings-4-line {
+        font-size: 1.6vmax;
+    }
+
+    .ri-notification-3-line {
+        font-size: 1.6vmax;
+    }
+
+    input {
+        border: none;
+        width: 100%;
+        border-radius: 10px;
+        padding: 15px 2px;
+        background-color: #eaf1fb;
+    }
+
+    .mid {
+        height: 100%;
+        width: 40%;
+        /* background-color: rgb(40, 167, 56); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right {
+        height: 100%;
+        width: 14%;
+        /* background-color: rgb(118, 85, 85); */
+        margin-right: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .profile-div {
+        height: 40px;
+        width: 40px;
+        background-color: darkorchid;
+        border-radius: 20px;
+    }
+
+    .profile-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50px;
+    }
+
+    .left-div-side {
+        height: 90%;
+        width: 20%;
+        background-color: #f6f8fc;
+    }
+
+    .compose-btn {
+        /* display: flex;
+        align-items: center;
+        justify-content: space-between; */
+        padding: 15px 19px;
+        font-size: 1.3vmax;
+        border-radius: 20px;
+        border: none;
+        margin-left: 9%;
+        background-color: #c2e7ff;
+    }
+
+    .ri-pencil-line {
+        /* margin: 5px; */
+        font-size: 1.3vmax;
+    }
+
+    .list-tem {
+        height: 50%;
+        width: 70%;
+        /* background-color: goldenrod; */
+        flex-direction: column;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 9%;
+        margin-top: 9%;
+    }
+
+    .inbox-div {
+        height: 13%;
+        width: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .inbox-div2 {
+        height: 13%;
+        width: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+    }
+
+    .inbox-div2:hover {
+        height: 13%;
+        width: 100%;
+        background-color: #d3e3fd;
+        border-radius: 50px;
+    }
+
+    .inbox-div:hover {
+        height: 13%;
+        width: 100%;
+        background-color: #d3e3fd;
+        border-radius: 50px;
+    }
+
+    a {
+        text-decoration: navy;
+        color: black;
+        font-size: 1.1vmax;
+        line-height: 2vmax;
+        text-transform: capitalize;
+        text-align: justify;
+        font-weight: 200;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .inbox {
+        margin-left: 4%;
+        height: 100%;
+        width: 38%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* background-color: rgb(216, 188, 8); */
+    }
+
+    .starred {
+        margin: 4%;
+        height: 10%;
+        width: 42.5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* background-color: blueviolet; */
+
+    }
+
+    .snooze {
+        margin: 4%;
+        height: 10%;
+        width: 42.5%;
+        /* background-color: rgb(143, 117, 167); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .setting {
+        margin: 4%;
+        height: 10%;
+        width: 40%;
+        /* background-color: rgb(24, 203, 30); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .signout {
+        margin: 4%;
+        height: 10%;
+        width: 42%;
+        /* background-color: rgb(24, 203, 30); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .profile {
+        margin: 4%;
+        height: 10%;
+        width: 40%;
+        /* background-color: rgb(24, 203, 30); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sent {
+        margin: 4%;
+        height: 10%;
+        width: 32%;
+        /* background-color: rgb(24, 203, 30); */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h6 {
+        font-size: 10px;
+        font-weight: 100;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .draft-div{
+        height: 80vh;
+        width: 78%;
+       background-color: white;
+        position: absolute;
+        top: 12%;
+        left: 20%;
+        border-radius: 10px;
+    }
+    .main-text-div{
+        margin: 0.2%;
+        position: relative;
+        top: 1%;
+        height: 9%;
+        width: 98%;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* border: 1px solid rgb(213, 211, 211); */
+        
+       border-bottom: 1px solid rgb(170, 166, 166); 
+    }
+    
+    .left-contaniner{
+        height: 100%;
+        width: 20%;
+        /* background-color: burlywood; */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .jobli{
+        font-weight: 400;
+        text-transform: capitalize;
+        font-size: 1.3vmax;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .ri-star-line{
+        font-size: 1.5vmax;
+    }
+    .ri-star-line:hover{
+        /* background-color: yellow; */
+        /* color: yellow; */
+        border-radius: 50px;
+    }
+     /* #midcontainer{
+        height: 100%;
+        padding: 15px  300px;
+         background-color: rgb(85, 43, 184); 
+    }  */
+    #mid-container{
+        height: 100%;
+        width: 70%;
+        /* background-color: #eaf1fb; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .wel-span{
+        font-weight: 500;
+    }
+    .right-container{
+        height: 100%;
+        width: 10%;
+        /* background-color: rgb(43, 176, 41); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .month{
+        font-size: 1.3vmax;
+        color: black;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+    }
+    .square-img{
+        height: 20px;
+        width: 20px;
+    }
+   
+</style>
+
+<body>
+    <div class="container">
+        <div class="naviagtion">
+            <div class="left">
+                <i class="ri-menu-line"></i>
+
+                <img width="30px"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
+                    alt="">
+                <h4>Gmail</h4>
+            </div>
+            <div class="mid">
+                <input type="text" placeholder="search mail ">
+
+            </div>
+            <div class="right">
+                <i class="ri-notification-3-line"></i>
+                <i class="ri-question-line"></i>
+                <i class="ri-settings-4-line"></i>
+                <div class="profile-div">
+                    <img class="profile-img"
+                        src="https://images.pexels.com/photos/884979/pexels-photo-884979.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <div class="left-div-side">
+         <a href="/compose"><button class="compose-btn"> <i class="ri-pencil-line"></i>compose</button></a> 
+
+            <div class="list-tem">
+                <div class="inbox-div2">
+                    <div class="profile">
+                        <i class="ri-user-line"></i>
+                        <!-- <h5>profile</h5> -->
+                        <a href="/profile">profile</a>
+                    </div>
+                </div>
+
+                <div class="inbox-div">
+                    <div class="inbox">
+                        <i class="ri-mail-line"></i>
+                        <!-- <h5> inbox</h5> -->
+                        <a href="/inbox">inbox</a>
+                    </div>
+                    <h6>1,902</h6>
+                </div>
+
+                <div class="inbox-div2">
+                    <div class="starred">
+                        <i class="ri-star-line"></i>
+                        <!-- <h5> starred</h5> -->
+                        <a href="/starred">starred</a>
+                    </div>
+                </div>
+
+
+                <div class="inbox-div2">
+                    <div class="snooze">
+                        <i class="ri-time-line"></i>
+                        <!-- <h5>snooze</h5> -->
+                        <a href="/snooze">snooze</a>
+                    </div>
+                </div>
+
+                <div class="inbox-div2">
+                    <div class="sent">
+                        <i class="ri-send-plane-2-line"></i>
+                        <!-- <h5> sent</h5> -->
+                        <a href="/sent">sent</a>
+                    </div>
+                </div>
+
+                <div class="inbox-div2">
+                    <div class="setting">
+                        <i class="ri-settings-5-line"></i>
+                        <!-- <h5>setting</h5> -->
+                        <a href="/setting">setting</a>
+                    </div>
+                </div>
+
+                <div class="inbox-div2">
+                    <div class="signout">
+                        <i class="ri-logout-circle-line"></i>
+                        <!-- <h5>signout</h5> -->
+                        <a href="/signout">signout</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- <div style="background-color: aqua; height: 20%; width: 20%;"></div> -->
+            <div class="draft-div">
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+
+                <div class="main-text-div">
+                    <div class="left-contaniner">
+                        <img class="square-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEX///8AAABQUFBTU1Po6OhfX18XFxfPXEYCAAABbklEQVR4nO3dsW0DQRAEQYpPMv+Q5ckf48TGoyqAwTVw/j4eAAAAAAAAAAAA3NPr/Wx4vw4Vvn8q3ocKn98O+/M8V/i5vv1Dn9fnaOF1aHpxHS08Nb04+AyF/0Rhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzemFwub0QmFzeqGwOb1Q2JxeKGxOLxQ2pxcKm9MLhc3phcLm9EJhc3qhsDm9UNicXihsTi8UNqcXCpvTC4XN6YXC5vRCYXN6obA5vVDYnF4obE4vFDanFwqb0wuFzenF2cL737C8/x3SiFOF978HfP+bzgAAAAAAAAAAAHzbL8RzDOHxqGGaAAAAAElFTkSuQmCC" alt="">
+                        <i class="ri-star-line"></i>
+                        <h5 class="jobli">Google Analaytics</h5>
+                    </div>
+                  
+                     <a id="mid-container" href="/midcontainer"><span class="wel-span">welcom to google analaytics</span> - valuable insight await you welcome
+                        to google analaytics! with analaytics!....
+                     </a>
+                    <div class="right-container">
+                        <h5 class="month">Feb 26</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .contaner{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    form{
+        border-radius: 10px;
+        position: absolute;
+        top: 10%;
+        left: 35%;
+        
+        height: 80%;
+        width: 30%;
+        /* box-shadow: 2px 1px 5px black; */
+        border: 1px solid silver;
+        background-color: transparent;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input{
+     width: 90%;
+     margin: 2%;
+     padding: 12px 2px;
+     border-radius: 10px;
+    }
+    h3{
+        margin-bottom: 20px;
+        text-transform: capitalize;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button{
+        width: 40%;
+     margin: 2%;
+     padding: 14px 2px;
+     border-radius: 10px;
+     background-color: #4285f4;
+     color: white;
+     border: none;
+    }
+    .logo-img{
+        height: 30px;
+        width: 90px;
+        position: relative;
+        left: 0%;
+        top: -5%;
+    }
+</style>
+<body>
+  
+    <form action="/signin" method="post">
+        <img class="logo-img" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" alt="">
+        <h3>Login Email</h3>
+        <input
+        type="text"
+        name="email"
+        placeholder="johndoe.example.com"
+        />
+        <input type="password"
+        name="password"
+        placeholder="*****"/>
+  
+        <button>Login</button> <br>
+        <a href="/forget-password">forgetpassword </a>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>send</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .alert{
+        height: 10%;
+        width: 20%;
+        background-color: white;
+        border-radius: 20px;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+box-shadow: 1px 1px 5px black;
+    }
+    h1{
+        color: rgb(115, 203, 115);
+     font-size: 1.2vmax;
+     padding: 5px 2px;
+    }
+</style>
+<body>
+    <form action="/send" method="post">
+      <div class="alert"><h1>"message sent succesefully"</h1>
+      </div>
+    </form>
+</body>
+</html>

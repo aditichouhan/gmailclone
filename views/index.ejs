@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google workplace | Gmail</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100%;
+    background-color: beige;
+    overflow: hidden;
+  }
+
+  .navigation {
+    height: 10%;
+    width: 100%;
+    background-color: #ffffff;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-right: 1%;
+   border-bottom: 1px solid silver;
+  }
+
+  .left-navi-div {
+    height: 100%;
+    width: 27%;
+    /* background-color: cornflowerblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left {
+    height: 40%;
+    width: 75%;
+
+  }
+
+  .google-logo {
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+  }
+
+  .img-two-div {
+    height: 53%;
+    width: 12%;
+    /* background-color: firebrick; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .google-work-img {
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .right {
+    height: 100%;
+    width: 24%;
+    /* background-color: chartreuse; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .btn-contect {
+    padding: 10px 20px;
+    font-size: 1.4vmax;
+    border-radius: 5px;
+    border: 1px solid rgb(192, 189, 189);
+    background-color: transparent;
+    color: #85a3eb;
+  }
+
+  .btn-get {
+    padding: 10px 20px;
+    font-size: 1.4vmax;
+    border-radius: 5px;
+    background-color: #1a73e8;
+    border: none;
+    color: white;
+  }
+
+  .mid-div {
+    height: 100%;
+    width: 40%;
+    /* background-color: aqua; */
+  }
+
+  .mid-div {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    /* background-color: aqua; */
+    display: flex;
+    overflow: hidden;
+    border-radius: 30px;
+  }
+
+  .mid-div div {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .pera-section {
+    letter-spacing: 1px;
+    position: absolute;
+    font-size: 1.3vmax;
+    color: #1a73e8;
+    white-space: nowrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: animate 40s linear infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .con-main {
+    height: 90%;
+    width: 100%;
+   background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main-left {
+    height: 100%;
+    width: 50%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .email-div-left {
+    height: 80%;
+    width: 100%;
+    /* background-color: chartreuse; */
+  }
+
+  .email-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .main-right {
+    height: 100%;
+    width: 50%;
+    /* background-color: rgb(157, 118, 118); */
+    /* flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  .mail-div {
+    height: 15%;
+    width: 30%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 20%;
+    left: 20%;
+  }
+  h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5vmax;
+    text-align: justify;
+    text-transform: capitalize;
+  }
+
+  .mail-img-div {
+    height: 50px;
+    width: 60px;
+    /* background-color: chocolate; */
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mail-text {
+    position: relative;
+    top: 23%;
+    left: 20%;
+    font-size: 1.3vmax;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  }
+
+  .pera-div {
+    height: 20%;
+    width: 60%;
+    /* background-color: darkblue; */
+    position: relative;
+    left: 20%;
+    top: 27%;
+  }
+
+  .mail-text-pera {
+   font-size: 1.2vmax;
+  }
+  .btn-divs{
+    height: 10%;
+    width: 40%;
+    /* background-color: cadetblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 30%;
+    left: 20%;
+  }
+
+  .signup{
+   text-decoration: none;
+   color: #ffffff;
+  }
+  button{
+    padding: 15px 40px;
+    background-color: #1a73e8;
+    border: none;
+    color: white;
+    font-size: 1.4vmax;
+    border-radius: 10px;
+  }
+  .signin{
+    padding: 10px 20px;
+  }
+
+</style>
+
+<body>
+
+  <div class="container">
+    <div class="navigation">
+
+
+      <div class="left-navi-div">
+
+        <div class="left">
+          <img class="google-logo"
+            src="https://workspace.google.com/lp/static/images/logo-google-workspace.svg?fingerprint=6724ff20a813baddc71a3ff4f67e2fc3"
+            alt="">
+        </div>
+
+
+        <div class="img-two-div">
+          <img class="google-work-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
+            alt="">
+        </div>
+      </div>
+      <!-- ---------------- -->
+      <section class="mid-div">
+        <div>
+          <p class="pera-section">create your account and login your email.
+            create your account and login your email.
+            create your account and login your email.
+            create your account and login your email.
+            create your account and login your email. </p>
+        </div>
+      </section>
+
+
+      <!-- --------------- -->
+      <div class="right">
+        <button class="btn-contect">Contect sales</button>
+        <a class="signup" href="/Signup"><button class="btn-get">Get started</button></a> 
+      </div>
+    </div>
+
+
+    <div class="con-main">
+      <div class="main-left">
+        <div class="email-div-left">
+          <img class="email-img"
+            src="https://lh3.googleusercontent.com/P9Ucuwi9TqrDZFJF7yoc6e8255YJJ_L618x130968Xgl2Yp0kNL8AjkuoLIgxOZdBfrKftmvlnJSZMtkcVnhiiwpmHhxYahSCqcyslY=s0"
+            alt="">
+        </div>
+      </div>
+      <div class="main-right">
+
+        <div class="mail-div">
+          <div class="mail-img-div"></div>
+          <h3>gmail</h3>
+        </div>
+        <h4 class="mail-text">
+          Secure business email, and so much more
+        </h4>
+        <div class="pera-div">
+          <p class="mail-text-pera">
+            The latest Gmail makes it easier to stay on top of the work that matters. With secure, ad-free email as a
+            foundation, you can also chat, make voice or video calls,
+            and stay on top of project work with
+            shared files and tasks — all right in Gmail.
+          </p>
+        </div>
+
+        <div class="btn-divs">
+          <!-- <a class="signup" href="/Signup"><button>Create</button></a>
+          <a class="signin" href="/signin"><button>Login</button></a> -->
+          <a class="signup" href="/Signup"><button class="btn-get">Get started</button></a> 
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+</body>
+
+</html>
